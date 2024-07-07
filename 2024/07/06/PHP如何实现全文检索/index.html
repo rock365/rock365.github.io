@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+  <meta name="robots" content="index, follow">
+  <!-- title -->
+  
+    
+  <title>PHP如何实现全文检索 - WindSearch</title>
+    
+  
+  
+  <!-- open graph -->
+  <meta name="description" content="这里讨论的是从零开发，不是使用第三方软件。要实现全文检索，下面这些部分是必不可少的。 中文分词php的分词工具也很多，如果你的领域很垂直，那么词库的构建就很重要的。常规分词的基本方法都是正反最大匹配，相对而言，反向最大匹配效果更好一些，或者两者结合取其优。 如果不想使用这些分词工具，也可以进行n-gram切词，设定一个窗口，例如两个字符，然后从字符串的起始位置，开始向后移动，比如“明天会更好”这句">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PHP如何实现全文检索">
+<meta property="og:url" content="https://rock365.github.io/2024/07/06/PHP%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2/index.html">
+<meta property="og:site_name" content="WindSearch">
+<meta property="og:description" content="这里讨论的是从零开发，不是使用第三方软件。要实现全文检索，下面这些部分是必不可少的。 中文分词php的分词工具也很多，如果你的领域很垂直，那么词库的构建就很重要的。常规分词的基本方法都是正反最大匹配，相对而言，反向最大匹配效果更好一些，或者两者结合取其优。 如果不想使用这些分词工具，也可以进行n-gram切词，设定一个窗口，例如两个字符，然后从字符串的起始位置，开始向后移动，比如“明天会更好”这句">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-07-06T04:44:18.000Z">
+<meta property="article:modified_time" content="2024-07-06T05:48:31.413Z">
+<meta property="article:author" content="rock365">
+<meta name="twitter:card" content="summary">
+  <!-- canonical -->
+  
+  <link rel="canonical" href="https://rock365.github.io/2024/07/06/PHP如何实现全文检索/">
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/img/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <!-- CSS -->
+  
+<link rel="stylesheet" href="/css/reset.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/markdown.css">
+
+  
+<link rel="stylesheet" href="/css/fonts.css">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+    <body>
+        <div class="paper">
+            <div class="paper-main">
+                
+                    <div class="post-header">
+    <a class="logo" href="/">WindSearch</a>
+    <!-- <div class="logo"><a href="/" title="Len"><img src="/img/logo.svg" alt="Len" aria-label="logo" height="20"></a></div> -->
+        <ul class="nav">
+            
+            <li><a href="/">首页</a></li>
+            
+            <li><a href="/about">关于</a></li>
+            
+            <li><a href="/archives">文章</a></li>
+            
+        </ul>
+
+
+    </a>
+</div>
+
+                
+                <div class="post-main">
+    
+        <div class="post-main-title">
+            PHP如何实现全文检索
+        </div>
+        <div class="post-meta">
+            2024-07-06 ｜ 
+            
+        </div>
+        <!-- 圆角分类 -->
+        <!-- <div class="tags"> -->
+            <!--  -->
+        <!-- </div> -->
+        <div class="post-md">
+            <p>这里讨论的是从零开发，不是使用第三方软件。要实现全文检索，下面这些部分是必不可少的。</p>
+<h3 id="中文分词"><a href="#中文分词" class="headerlink" title="中文分词"></a>中文分词</h3><p>php的分词工具也很多，如果你的领域很垂直，那么词库的构建就很重要的。常规分词的基本方法都是正反最大匹配，相对而言，反向最大匹配效果更好一些，或者两者结合取其优。</p>
+<p>如果不想使用这些分词工具，也可以进行n-gram切词，设定一个窗口，例如两个字符，然后从字符串的起始位置，开始向后移动，比如“明天会更好”这句话，移动0次，得到“明天”，移动一次，得到“天会”，移动两次，得到“会更”，以此类推。</p>
+<p>n-gram方法可以达到“分词的效果”，但是会造成无意义字符串过多，索引数据量非常庞大。这种方法的召回率也不如专业的分词工具，不过，用还是可以用的。</p>
+<h3 id="倒排索引"><a href="#倒排索引" class="headerlink" title="倒排索引"></a>倒排索引</h3><p><strong>索引压缩存储</strong></p>
+<p>当数据比较少时，可以不用太关注数据结构算法，使用简单的存储逻辑就可以达到效果，速度也能保证。当数据达到百万、甚至千万时，就不得不去探索更高效的数据结构了，在专业版上，我使用了bitmap存储结构。bitmap算法在少量数据时，并没有什么优势，当然也不会比其它算法效率差，当数据及其庞大时，优势瞬间体现出来了，能够很大程度上节约存储空间。</p>
+<p>索引压缩存储，还有其他的方式，比如RBM，FOR算法。</p>
+<p>这里有一个问题，最后进行多term集合的计算，并集或交集，不还是要加载完整的倒排链到内存？存储阶段可以压缩，缓解磁盘压力，在最后的计算阶段，依然要加载到内存，如果倒排链长度很长，那对内存的要求还是挺高的。不知道这里有没有什么其他优化方案。</p>
+<p><strong>增量索引</strong></p>
+<p>当数据量越来越大时，每次都更新全部索引，是非常耗时间的，增量索引功能，每次只需要更新已经插入的内容的索引即可，随后再将这部分新增索引与主索引合并，这样就能大幅度减少重复处理。</p>
+<h3 id="搜索召回"><a href="#搜索召回" class="headerlink" title="搜索召回"></a>搜索召回</h3><p>这里有几个不得不面对的问题：</p>
+<ul>
+<li>随着数据量增加，搜索响应时间变慢的问题</li>
+<li>召回率的问题</li>
+<li>相关性计算排序问题</li>
+</ul>
+<p><strong>对于搜索响应时间变慢的问题</strong></p>
+<p>这里的逻辑是，搜到符合的结果即返回。这样在海量数据的情况下，不必计算所有的数据，实际上，数据量过大时，计算所有的数据也是不现实的，除非机器性能够好。当计算结果达到要求时，直接返回搜索结果，这样能保证，即使数据达到了最大承受量，也能在很短的时间内返回结果，同时并不影响把最符合的结果找出来。</p>
+<p><strong>对于召回率的问题</strong></p>
+<p>分词细粒度化。在前端分词细粒度化，可以提高召回率，缺点就是有可能结果不那么精确。</p>
+<p>加入近义词 提高搜索泛化能力。用户的query并不一定都是完整、无错误的，更有可能搜索词与想要搜索的内容区别很大，这时，为了提高召回率，可以进行query改写：</p>
+<ul>
+<li>加入近义词搜索，比如，用户搜索“马铃薯”，这时可以同时搜索“土豆”，因为两者是一样的意思，这样召回率能够大大提高；</li>
+<li>term纠错，对用户输入的错字&#x2F;错词&#x2F;拼音内容，进行纠正</li>
+</ul>
+<p><strong>对于相关性计算排序问题</strong></p>
+<p>相关性计算能够大幅度提高排序质量，如果只是基于基础的文本匹配方法，例如tf-idf，bm25等算法，能达到一定的效果，但远远不够，这时可以向量化，计算内容相似度，用这种方法作为补充。</p>
+<p>从多维度进行内容评分，最后进行加权求和，也是一种方法。</p>
+<p><strong>其它优化</strong></p>
+<ul>
+<li>去除停用词</li>
+</ul>
+<p>有时候用户是复制一句话进行搜索，文字里面包含很多标点符号、特殊符号，我在测试过程中，发现这些无意义的词、符号，它的倒排链非常长，搜索的时候，造成过多无意义计算，严重拖累搜索速度。显然这些都是干扰，绝大部分符号都是无意义的，如果不剔除，会影响召回效果。去除这些停用词是必须的。</p>
+<ul>
+<li>结果缓存</li>
+</ul>
+<p>对搜索结果进行缓存，这样每条搜索query在规定时间内，只需真正计算一次就行了，第二、第三…次搜索可直接获取缓存内容。</p>
+<hr>
+<p><strong>我的微信：azg555666</strong></p>
+
+        </div>
+    
+<!-- tags -->
+
+</div>
+                <div class="footer">
+    <span>Copyright © <script>document.write(new Date().getFullYear())</script> WindSearch</span>
+    <span>Powered by <a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a> with <a target="_blank" rel="noopener" href="https:///imzl.com/zenmind">ZenMind</a></span>
+</div>
+
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
+
+
+<script src="/js/highlight.min.js"></script>
+
+
+<script src="/js/highlightjs-line-numbers.js"></script>
+
+<script>
+    // hljs.initHighlightingOnLoad();
+    // hljs.initLineNumbersOnLoad();
+    hljs.highlightAll();
+</script>
+
+            </div>
+        </div>
+    </body>
+</html>
