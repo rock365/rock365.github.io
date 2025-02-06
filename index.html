@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>WindSearch 开发文档</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="WindSearch，专业的PHP全文检索解决方案，适用于中小站点，具有安全、易用、强大的特点。">
+    
+    <link rel="preload" href="/assets/css/0.styles.9f84806b.css" as="style"><link rel="preload" href="/assets/js/app.c77bbd62.js" as="script"><link rel="preload" href="/assets/js/2.0c4bddf9.js" as="script"><link rel="preload" href="/assets/js/1.50b457b8.js" as="script"><link rel="preload" href="/assets/js/22.52be2116.js" as="script"><link rel="prefetch" href="/assets/js/10.325b9f09.js"><link rel="prefetch" href="/assets/js/11.845e3692.js"><link rel="prefetch" href="/assets/js/12.ecdb524b.js"><link rel="prefetch" href="/assets/js/13.3f3f6a36.js"><link rel="prefetch" href="/assets/js/14.eb7a3d07.js"><link rel="prefetch" href="/assets/js/15.b60f3925.js"><link rel="prefetch" href="/assets/js/16.85253907.js"><link rel="prefetch" href="/assets/js/17.c2838453.js"><link rel="prefetch" href="/assets/js/18.3256f17f.js"><link rel="prefetch" href="/assets/js/19.d8afd0ae.js"><link rel="prefetch" href="/assets/js/20.10e47ab9.js"><link rel="prefetch" href="/assets/js/21.33b300c9.js"><link rel="prefetch" href="/assets/js/23.1d533a6c.js"><link rel="prefetch" href="/assets/js/24.9aaf0a61.js"><link rel="prefetch" href="/assets/js/25.911b6c85.js"><link rel="prefetch" href="/assets/js/26.8bda4f4c.js"><link rel="prefetch" href="/assets/js/27.d8279de2.js"><link rel="prefetch" href="/assets/js/28.2bb9380b.js"><link rel="prefetch" href="/assets/js/29.5350a9bb.js"><link rel="prefetch" href="/assets/js/3.af33e5d6.js"><link rel="prefetch" href="/assets/js/30.d1899057.js"><link rel="prefetch" href="/assets/js/31.4cf8aaf5.js"><link rel="prefetch" href="/assets/js/32.8e664b80.js"><link rel="prefetch" href="/assets/js/33.067a0120.js"><link rel="prefetch" href="/assets/js/34.eed4a9b4.js"><link rel="prefetch" href="/assets/js/35.41eefd85.js"><link rel="prefetch" href="/assets/js/36.3a6fe9e3.js"><link rel="prefetch" href="/assets/js/37.45847098.js"><link rel="prefetch" href="/assets/js/38.1c7d4a3d.js"><link rel="prefetch" href="/assets/js/39.53b82289.js"><link rel="prefetch" href="/assets/js/4.45665f8a.js"><link rel="prefetch" href="/assets/js/5.7098d77a.js"><link rel="prefetch" href="/assets/js/6.0c0a0f39.js"><link rel="prefetch" href="/assets/js/7.6a854e57.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.77260563.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.9f84806b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" aria-current="page" class="home-link router-link-exact-active router-link-active"><!----> <span class="site-name">WindSearch 开发文档</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  首页
+</a></div><div class="nav-item"><a href="https://github.com/rock365/windsearch" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  首页
+</a></div><div class="nav-item"><a href="https://github.com/rock365/windsearch" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <!----> </aside> <main aria-labelledby="main-title" class="home"><header class="hero"><!----> <h1 id="main-title">
+      WindSearch
+    </h1> <p class="description">
+      专业的PHP全文检索解决方案
+    </p> <p class="action"><a href="/guide/" class="nav-link action-button">
+  快速上手 →
+</a></p></header> <div class="features"><div class="feature"><h2>易用</h2> <p>引入一行代码就能安装完成，且再无其它任何配置</p></div><div class="feature"><h2>快速上手</h2> <p>更简洁清晰查询语言，无额外学习成本</p></div><div class="feature"><h2>安全</h2> <p>代码由用户完全掌握，可进行任何安全漏洞扫描</p></div><div class="feature"><h2>原生友好</h2> <p>纯PHP开发，能跟PHP项目无缝集成</p></div><div class="feature"><h2>零运维成本</h2> <p>只要网站正常运行，WindSearch就能一直运行，永不宕机</p></div><div class="feature"><h2>性能强悍</h2> <p>百万级数据毫秒级响应，千万级数据面不改色</p></div><div class="feature"><h2>极高性价比</h2> <p>磁盘式搜索引擎，对服务器内存资源占用极小</p></div></div> <div class="theme-default-content custom content__default"></div> <div class="footer">
+    保留所有权利 | 作者：rock365
+  </div></main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.c77bbd62.js" defer></script><script src="/assets/js/2.0c4bddf9.js" defer></script><script src="/assets/js/1.50b457b8.js" defer></script><script src="/assets/js/22.52be2116.js" defer></script>
+  </body>
+</html>
