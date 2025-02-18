@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>开始搜索 | WindSearch 开发文档</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <script>var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?3a09102f77900dae5c830b57b68abf35";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();</script>
+    <meta name="description" content="WindSearch，专业的PHP全文检索解决方案，适用于中小站点，具有安全、易用、强大的特点。">
+    
+    <link rel="preload" href="/assets/css/0.styles.9f84806b.css" as="style"><link rel="preload" href="/assets/js/app.f8af33ae.js" as="script"><link rel="preload" href="/assets/js/2.0c4bddf9.js" as="script"><link rel="preload" href="/assets/js/1.50b457b8.js" as="script"><link rel="preload" href="/assets/js/32.dc008934.js" as="script"><link rel="prefetch" href="/assets/js/10.325b9f09.js"><link rel="prefetch" href="/assets/js/11.845e3692.js"><link rel="prefetch" href="/assets/js/12.ecdb524b.js"><link rel="prefetch" href="/assets/js/13.3f3f6a36.js"><link rel="prefetch" href="/assets/js/14.eb7a3d07.js"><link rel="prefetch" href="/assets/js/15.b60f3925.js"><link rel="prefetch" href="/assets/js/16.85253907.js"><link rel="prefetch" href="/assets/js/17.c2838453.js"><link rel="prefetch" href="/assets/js/18.3256f17f.js"><link rel="prefetch" href="/assets/js/19.d8afd0ae.js"><link rel="prefetch" href="/assets/js/20.10e47ab9.js"><link rel="prefetch" href="/assets/js/21.33b300c9.js"><link rel="prefetch" href="/assets/js/22.52be2116.js"><link rel="prefetch" href="/assets/js/23.1d533a6c.js"><link rel="prefetch" href="/assets/js/24.8af8fc31.js"><link rel="prefetch" href="/assets/js/25.0bd9b78c.js"><link rel="prefetch" href="/assets/js/26.8211c706.js"><link rel="prefetch" href="/assets/js/27.dad854f1.js"><link rel="prefetch" href="/assets/js/28.c4daef77.js"><link rel="prefetch" href="/assets/js/29.95fa4772.js"><link rel="prefetch" href="/assets/js/3.af33e5d6.js"><link rel="prefetch" href="/assets/js/30.47eb8f0f.js"><link rel="prefetch" href="/assets/js/31.aabeae69.js"><link rel="prefetch" href="/assets/js/33.3420482d.js"><link rel="prefetch" href="/assets/js/34.73a350d9.js"><link rel="prefetch" href="/assets/js/35.7e4df06f.js"><link rel="prefetch" href="/assets/js/36.bfd9911b.js"><link rel="prefetch" href="/assets/js/37.8cb14898.js"><link rel="prefetch" href="/assets/js/38.8006d729.js"><link rel="prefetch" href="/assets/js/39.16c5af8d.js"><link rel="prefetch" href="/assets/js/4.45665f8a.js"><link rel="prefetch" href="/assets/js/40.5493ddf4.js"><link rel="prefetch" href="/assets/js/41.1c9708c8.js"><link rel="prefetch" href="/assets/js/42.3226ec90.js"><link rel="prefetch" href="/assets/js/43.db2ed4d9.js"><link rel="prefetch" href="/assets/js/44.46556fe3.js"><link rel="prefetch" href="/assets/js/45.4e1411aa.js"><link rel="prefetch" href="/assets/js/46.cac9b617.js"><link rel="prefetch" href="/assets/js/47.2aea66d0.js"><link rel="prefetch" href="/assets/js/48.d83463ea.js"><link rel="prefetch" href="/assets/js/49.80bf7ee3.js"><link rel="prefetch" href="/assets/js/5.7098d77a.js"><link rel="prefetch" href="/assets/js/50.6e789f18.js"><link rel="prefetch" href="/assets/js/51.2bc02b31.js"><link rel="prefetch" href="/assets/js/52.e79d3da8.js"><link rel="prefetch" href="/assets/js/53.afbbe540.js"><link rel="prefetch" href="/assets/js/54.48d33398.js"><link rel="prefetch" href="/assets/js/55.2a5c3727.js"><link rel="prefetch" href="/assets/js/6.0c0a0f39.js"><link rel="prefetch" href="/assets/js/7.6a854e57.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.77260563.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.9f84806b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">WindSearch 开发文档</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="版本" class="dropdown-title"><span class="title">版本</span> <span class="arrow down"></span></button> <button type="button" aria-label="版本" class="mobile-dropdown-title"><span class="title">版本</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/guide/v2.0/" class="nav-link">
+  v2.0
+</a></li><li class="dropdown-item"><!----> <a href="/guide/v1.0/" class="nav-link router-link-active">
+  v1.0
+</a></li></ul></div></div><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="https://github.com/rock365/windsearch" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="版本" class="dropdown-title"><span class="title">版本</span> <span class="arrow down"></span></button> <button type="button" aria-label="版本" class="mobile-dropdown-title"><span class="title">版本</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/guide/v2.0/" class="nav-link">
+  v2.0
+</a></li><li class="dropdown-item"><!----> <a href="/guide/v1.0/" class="nav-link router-link-active">
+  v1.0
+</a></li></ul></div></div><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="https://github.com/rock365/windsearch" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/guide/v1.0/" aria-current="page" class="sidebar-link">windsearch 1.0 介绍</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/v1.0/#什么是windsearch" class="sidebar-link">什么是windsearch？</a></li></ul></li><li><a href="/guide/v1.0/开始使用.html" class="sidebar-link">开始使用</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/v1.0/开始使用.html#php环境要求" class="sidebar-link">PHP环境要求</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/开始使用.html#安装导入" class="sidebar-link">安装导入</a></li></ul></li><li><a href="/guide/v1.0/数据类型.html" class="sidebar-link">数据类型</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/v1.0/数据类型.html#primarykey-主键" class="sidebar-link">primarykey 主键</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/数据类型.html#text-文本" class="sidebar-link">text 文本</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/数据类型.html#keyword-关键词" class="sidebar-link">keyword 关键词</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/数据类型.html#numeric-数值" class="sidebar-link">numeric 数值</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/数据类型.html#date-日期" class="sidebar-link">date 日期</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/数据类型.html#geo-point-地理" class="sidebar-link">geo_point 地理</a></li></ul></li><li><a href="/guide/v1.0/创建索引库.html" class="sidebar-link">创建索引库</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/v1.0/创建索引库.html#配置字段" class="sidebar-link">配置字段</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/创建索引库.html#配置字段索引" class="sidebar-link">配置字段索引</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/创建索引库.html#配置字段分词方式" class="sidebar-link">配置字段分词方式</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/创建索引库.html#完整mapping" class="sidebar-link">完整mapping</a></li></ul></li><li><a href="/guide/v1.0/导入数据.html" class="sidebar-link">导入数据</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/v1.0/导入数据.html#大量数据" class="sidebar-link">大量数据</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/导入数据.html#少量数据" class="sidebar-link">少量数据</a></li></ul></li><li><a href="/guide/v1.0/构建索引.html" class="sidebar-link">构建索引</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/v1.0/构建索引.html#一键调用" class="sidebar-link">一键调用</a></li></ul></li><li><a href="/guide/v1.0/开始搜索.html" class="active sidebar-link">开始搜索</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/v1.0/开始搜索.html#match-单字段搜索" class="sidebar-link">match 单字段搜索</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/开始搜索.html#multi-match-多字段搜索" class="sidebar-link">multi_match 多字段搜索</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/开始搜索.html#match-prefix-前缀匹配" class="sidebar-link">match_prefix 前缀匹配</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/开始搜索.html#match-suffix-后缀匹配" class="sidebar-link">match_suffix 后缀匹配</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/开始搜索.html#match-prefix-suffix-前后缀混合匹配" class="sidebar-link">matchprefixsuffix 前后缀混合匹配</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/开始搜索.html#match-fuzzy-模糊搜索" class="sidebar-link">match_fuzzy 模糊搜索</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/开始搜索.html#match-phrase-短语搜索" class="sidebar-link">match_phrase 短语搜索</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/开始搜索.html#match-terms-精确搜索" class="sidebar-link">match_terms 精确搜索</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/开始搜索.html#match-bool-布尔搜索" class="sidebar-link">match_bool 布尔搜索</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/开始搜索.html#match-range-范围查询" class="sidebar-link">match_range 范围查询</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/开始搜索.html#match-all-查询所有数据" class="sidebar-link">match_all 查询所有数据</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/开始搜索.html#match-rand-随机获取数据" class="sidebar-link">match_rand 随机获取数据</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/开始搜索.html#match-primarykey-根据主键查询数据" class="sidebar-link">match_primarykey 根据主键查询数据</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/开始搜索.html#match-geo-地理空间搜索" class="sidebar-link">match_geo 地理空间搜索</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/开始搜索.html#match-auto-completion-搜索建议" class="sidebar-link">matchautocompletion 搜索建议</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/开始搜索.html#敏感词检测" class="sidebar-link">敏感词检测</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/开始搜索.html#aggs-聚合查询" class="sidebar-link">aggs 聚合查询</a></li></ul></li><li><a href="/guide/v1.0/搜索过滤.html" class="sidebar-link">搜索过滤</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/v1.0/搜索过滤.html#过滤介绍" class="sidebar-link">过滤介绍</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/搜索过滤.html#地理距离过滤" class="sidebar-link">地理距离过滤</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/搜索过滤.html#数值过滤" class="sidebar-link">数值过滤</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/搜索过滤.html#主键过滤" class="sidebar-link">主键过滤</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/搜索过滤.html#日期过滤" class="sidebar-link">日期过滤</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/搜索过滤.html#字符串匹配过滤" class="sidebar-link">字符串匹配过滤</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/搜索过滤.html#多个过滤条件" class="sidebar-link">多个过滤条件</a></li></ul></li><li><a href="/guide/v1.0/中文分词.html" class="sidebar-link">中文分词</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/v1.0/中文分词.html#分词模式" class="sidebar-link">分词模式</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/中文分词.html#文本预处理" class="sidebar-link">文本预处理</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/中文分词.html#分词词库" class="sidebar-link">分词词库</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/中文分词.html#分词测试" class="sidebar-link">分词测试</a></li></ul></li><li><a href="/guide/v1.0/深入搜索.html" class="sidebar-link">深入搜索</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/v1.0/深入搜索.html#控制精度" class="sidebar-link">控制精度</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/深入搜索.html#匹配逻辑" class="sidebar-link">匹配逻辑</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/深入搜索.html#同义词" class="sidebar-link">同义词</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/深入搜索.html#字段权重" class="sidebar-link">字段权重</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/深入搜索.html#自定义返回字段" class="sidebar-link">自定义返回字段</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/深入搜索.html#数据脱敏" class="sidebar-link">数据脱敏</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/深入搜索.html#结果高亮" class="sidebar-link">结果高亮</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/深入搜索.html#结果分页" class="sidebar-link">结果分页</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/深入搜索.html#结果排序" class="sidebar-link">结果排序</a></li></ul></li><li><a href="/guide/v1.0/增量索引.html" class="sidebar-link">增量索引</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/v1.0/增量索引.html#导入增量数据" class="sidebar-link">导入增量数据</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/增量索引.html#构建增量索引" class="sidebar-link">构建增量索引</a></li></ul></li><li><a href="/guide/v1.0/实时索引.html" class="sidebar-link">实时索引</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/v1.0/实时索引.html#实时索引开关" class="sidebar-link">实时索引开关</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/实时索引.html#注意事项" class="sidebar-link">注意事项</a></li></ul></li><li><a href="/guide/v1.0/搜索统计.html" class="sidebar-link">搜索统计</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/v1.0/搜索统计.html#统计数据" class="sidebar-link">统计数据</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/搜索统计.html#查询统计结果" class="sidebar-link">查询统计结果</a></li></ul></li><li><a href="/guide/v1.0/其它功能.html" class="sidebar-link">其它功能</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/v1.0/其它功能.html#删除内容" class="sidebar-link">删除内容</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/其它功能.html#恢复内容" class="sidebar-link">恢复内容</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/其它功能.html#搜索缓存" class="sidebar-link">搜索缓存</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/其它功能.html#自定义同义词" class="sidebar-link">自定义同义词</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/其它功能.html#拼音搜索" class="sidebar-link">拼音搜索</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/其它功能.html#获取索引库列表" class="sidebar-link">获取索引库列表</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/其它功能.html#删除指定索引库" class="sidebar-link">删除指定索引库</a></li></ul></li><li><a href="/guide/v1.0/自定义分词插件.html" class="sidebar-link">自定义分词插件</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/v1.0/自定义分词插件.html#命名空间要求" class="sidebar-link">命名空间要求</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/自定义分词插件.html#方法要求" class="sidebar-link">方法要求</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/自定义分词插件.html#文件结构" class="sidebar-link">文件结构</a></li><li class="sidebar-sub-header"><a href="/guide/v1.0/自定义分词插件.html#加载自定义分词插件" class="sidebar-link">加载自定义分词插件</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="开始搜索"><a href="#开始搜索" class="header-anchor">#</a> 开始搜索</h1> <h2 id="match-单字段搜索"><a href="#match-单字段搜索" class="header-anchor">#</a> match 单字段搜索</h2> <div class="language-php extra-class"><pre class="language-php"><code><span class="token comment">//实例化引擎</span>
+<span class="token variable">$Wind</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name class-name-fully-qualified"><span class="token punctuation">\</span>WindSearch<span class="token punctuation">\</span>Index<span class="token punctuation">\</span>Wind</span><span class="token punctuation">(</span><span class="token variable">$indexName</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//开启分词功能</span>
+<span class="token variable">$Wind</span><span class="token operator">-&gt;</span><span class="token function">loadAnalyzer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//开始搜索</span>
+
+<span class="token comment">// 搜索单个字段</span>
+<span class="token variable">$query</span> <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token string single-quoted-string">'match'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+        <span class="token string single-quoted-string">'field'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+            <span class="token string single-quoted-string">'name'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'title'</span><span class="token punctuation">,</span>
+            <span class="token string single-quoted-string">'query'</span> <span class="token operator">=&gt;</span> <span class="token variable">$text</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token string single-quoted-string">'list_rows'</span> <span class="token operator">=&gt;</span> <span class="token variable">$listRows</span><span class="token punctuation">,</span> <span class="token comment">//每页多少条数据</span>
+        <span class="token string single-quoted-string">'page'</span> <span class="token operator">=&gt;</span> <span class="token variable">$page</span><span class="token punctuation">,</span> <span class="token comment">//第几页</span>
+
+    <span class="token punctuation">]</span>
+
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 搜索接口</span>
+<span class="token variable">$res</span> <span class="token operator">=</span> <span class="token variable">$Wind</span><span class="token operator">-&gt;</span><span class="token function">search</span><span class="token punctuation">(</span><span class="token variable">$query</span><span class="token punctuation">,</span> <span class="token variable">$page</span><span class="token punctuation">,</span> <span class="token variable">$listRows</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 返回的最终结果，可直接渲染到前台页面</span>
+<span class="token variable">$resArr</span> <span class="token operator">=</span> <span class="token variable">$res</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'result'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'_source'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+</code></pre></div><h2 id="multi-match-多字段搜索"><a href="#multi-match-多字段搜索" class="header-anchor">#</a> multi_match 多字段搜索</h2> <div class="language-php extra-class"><pre class="language-php"><code><span class="token comment">//实例化引擎</span>
+<span class="token variable">$Wind</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name class-name-fully-qualified"><span class="token punctuation">\</span>WindSearch<span class="token punctuation">\</span>Index<span class="token punctuation">\</span>Wind</span><span class="token punctuation">(</span><span class="token variable">$indexName</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//开启分词功能，搜索时，不需要加true</span>
+<span class="token variable">$Wind</span><span class="token operator">-&gt;</span><span class="token function">loadAnalyzer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 搜索多个字段</span>
+<span class="token variable">$query</span> <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token string single-quoted-string">'multi_match'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+        <span class="token string single-quoted-string">'field'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">[</span>
+                <span class="token string single-quoted-string">'name'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'title'</span><span class="token punctuation">,</span>
+                <span class="token string single-quoted-string">'query'</span> <span class="token operator">=&gt;</span> <span class="token variable">$text</span><span class="token punctuation">,</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token punctuation">[</span>
+                <span class="token string single-quoted-string">'name'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'tags'</span><span class="token punctuation">,</span>
+                <span class="token string single-quoted-string">'query'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'蔬菜'</span><span class="token punctuation">,</span><span class="token comment">// keyword字段无法分词</span>
+                
+            <span class="token punctuation">]</span>
+
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token string single-quoted-string">'list_rows'</span> <span class="token operator">=&gt;</span> <span class="token variable">$listRows</span><span class="token punctuation">,</span> <span class="token comment">// 每页多少条数据</span>
+        <span class="token string single-quoted-string">'page'</span> <span class="token operator">=&gt;</span> <span class="token variable">$page</span><span class="token punctuation">,</span> <span class="token comment">// 第几页</span>
+
+    <span class="token punctuation">]</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 搜索接口</span>
+<span class="token variable">$res</span> <span class="token operator">=</span> <span class="token variable">$Wind</span><span class="token operator">-&gt;</span><span class="token function">search</span><span class="token punctuation">(</span><span class="token variable">$query</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// $res 返回的最终结果，可直接渲染到前台页面</span>
+<span class="token comment">// ...</span>
+
+</code></pre></div><h2 id="match-prefix-前缀匹配"><a href="#match-prefix-前缀匹配" class="header-anchor">#</a> match_prefix 前缀匹配</h2> <div class="language-php extra-class"><pre class="language-php"><code><span class="token comment">// 前缀匹配</span>
+<span class="token variable">$query</span> <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token string single-quoted-string">'match_prefix'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+        <span class="token string single-quoted-string">'field'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+            <span class="token string single-quoted-string">'name'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'title'</span><span class="token punctuation">,</span>
+            <span class="token string single-quoted-string">'query'</span> <span class="token operator">=&gt;</span> <span class="token variable">$text</span><span class="token operator">.</span><span class="token string single-quoted-string">'*'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+       
+        <span class="token string single-quoted-string">'list_rows'</span> <span class="token operator">=&gt;</span> <span class="token variable">$listRows</span><span class="token punctuation">,</span> <span class="token comment">//每页多少条数据</span>
+        <span class="token string single-quoted-string">'page'</span> <span class="token operator">=&gt;</span> <span class="token variable">$page</span><span class="token punctuation">,</span> <span class="token comment">//第几页</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 搜索接口</span>
+<span class="token variable">$res</span> <span class="token operator">=</span> <span class="token variable">$Wind</span><span class="token operator">-&gt;</span><span class="token function">search</span><span class="token punctuation">(</span><span class="token variable">$query</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// $res 返回的最终结果，可直接渲染到前台页面</span>
+<span class="token comment">// ...</span>
+</code></pre></div><h2 id="match-suffix-后缀匹配"><a href="#match-suffix-后缀匹配" class="header-anchor">#</a> match_suffix 后缀匹配</h2> <div class="language-php extra-class"><pre class="language-php"><code><span class="token comment">// 后缀匹配</span>
+<span class="token variable">$query</span> <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token string single-quoted-string">'match_suffix'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+        <span class="token string single-quoted-string">'field'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+            <span class="token string single-quoted-string">'name'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'title'</span><span class="token punctuation">,</span>
+            <span class="token string single-quoted-string">'query'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'*'</span><span class="token operator">.</span><span class="token variable">$text</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token string single-quoted-string">'list_rows'</span> <span class="token operator">=&gt;</span> <span class="token variable">$listRows</span><span class="token punctuation">,</span> <span class="token comment">//每页多少条数据</span>
+        <span class="token string single-quoted-string">'page'</span> <span class="token operator">=&gt;</span> <span class="token variable">$page</span><span class="token punctuation">,</span> <span class="token comment">//第几页</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="match-prefix-suffix-前后缀混合匹配"><a href="#match-prefix-suffix-前后缀混合匹配" class="header-anchor">#</a> match_prefix_suffix 前后缀混合匹配</h2> <div class="language-php extra-class"><pre class="language-php"><code><span class="token comment">// 前后缀匹配</span>
+<span class="token variable">$query</span> <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token string single-quoted-string">'match_prefix_suffix'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+        <span class="token string single-quoted-string">'field'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+            <span class="token string single-quoted-string">'name'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'title'</span><span class="token punctuation">,</span>
+            <span class="token string single-quoted-string">'query'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span><span class="token string single-quoted-string">'关*'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'互联'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'*术'</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token comment">// 参数支持：字符串、数组</span>
+            
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+       
+        <span class="token string single-quoted-string">'list_rows'</span> <span class="token operator">=&gt;</span> <span class="token variable">$listRows</span><span class="token punctuation">,</span> <span class="token comment">//每页多少条数据</span>
+        <span class="token string single-quoted-string">'page'</span> <span class="token operator">=&gt;</span> <span class="token variable">$page</span><span class="token punctuation">,</span> <span class="token comment">//第几页</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="match-fuzzy-模糊搜索"><a href="#match-fuzzy-模糊搜索" class="header-anchor">#</a> match_fuzzy 模糊搜索</h2> <div class="language-php extra-class"><pre class="language-php"><code><span class="token comment">//实例化引擎</span>
+<span class="token variable">$Wind</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name class-name-fully-qualified"><span class="token punctuation">\</span>WindSearch<span class="token punctuation">\</span>Index<span class="token punctuation">\</span>Wind</span><span class="token punctuation">(</span><span class="token variable">$indexName</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//开启分词功能，搜索时，不需要加true</span>
+<span class="token variable">$Wind</span><span class="token operator">-&gt;</span><span class="token function">loadAnalyzer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//开始搜索</span>
+<span class="token variable">$query</span> <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token string single-quoted-string">'match_fuzzy'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+        <span class="token string single-quoted-string">'field'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+            <span class="token string single-quoted-string">'name'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'title'</span><span class="token punctuation">,</span>
+            <span class="token string single-quoted-string">'query'</span> <span class="token operator">=&gt;</span> <span class="token variable">$text</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        
+        <span class="token string single-quoted-string">'list_rows'</span> <span class="token operator">=&gt;</span> <span class="token variable">$listRows</span><span class="token punctuation">,</span> <span class="token comment">//每页多少条数据</span>
+        <span class="token string single-quoted-string">'page'</span> <span class="token operator">=&gt;</span> <span class="token variable">$page</span><span class="token punctuation">,</span> <span class="token comment">//第几页</span>
+    <span class="token punctuation">]</span>
+
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 搜索接口</span>
+<span class="token variable">$res</span> <span class="token operator">=</span> <span class="token variable">$Wind</span><span class="token operator">-&gt;</span><span class="token function">search</span><span class="token punctuation">(</span><span class="token variable">$query</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// $res 返回的最终结果，可直接渲染到前台页面</span>
+<span class="token comment">// ...</span>
+</code></pre></div><h2 id="match-phrase-短语搜索"><a href="#match-phrase-短语搜索" class="header-anchor">#</a> match_phrase 短语搜索</h2> <div class="language-php extra-class"><pre class="language-php"><code><span class="token comment">//实例化引擎</span>
+<span class="token variable">$Wind</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name class-name-fully-qualified"><span class="token punctuation">\</span>WindSearch<span class="token punctuation">\</span>Index<span class="token punctuation">\</span>Wind</span><span class="token punctuation">(</span><span class="token variable">$indexName</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//开启分词功能，搜索时，不需要加true</span>
+<span class="token variable">$Wind</span><span class="token operator">-&gt;</span><span class="token function">loadAnalyzer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//开始搜索</span>
+<span class="token comment">// 短语搜索 必须包含整个搜索query</span>
+<span class="token comment">// 如果搜索query包含停词，则很可能不会完整匹配出任何结果，因为term是被剔除过的</span>
+<span class="token variable">$query</span> <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token string single-quoted-string">'match_phrase'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+        <span class="token string single-quoted-string">'field'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+            <span class="token string single-quoted-string">'name'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'title'</span><span class="token punctuation">,</span>
+            <span class="token string single-quoted-string">'query'</span> <span class="token operator">=&gt;</span> <span class="token variable">$text</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token string single-quoted-string">'list_rows'</span> <span class="token operator">=&gt;</span> <span class="token variable">$listRows</span><span class="token punctuation">,</span> <span class="token comment">//每页多少条数据</span>
+        <span class="token string single-quoted-string">'page'</span> <span class="token operator">=&gt;</span> <span class="token variable">$page</span><span class="token punctuation">,</span> <span class="token comment">//第几页</span>
+    <span class="token punctuation">]</span>
+
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 搜索接口</span>
+<span class="token variable">$res</span> <span class="token operator">=</span> <span class="token variable">$Wind</span><span class="token operator">-&gt;</span><span class="token function">search</span><span class="token punctuation">(</span><span class="token variable">$query</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// $res 返回的最终结果，可直接渲染到前台页面</span>
+<span class="token comment">// ...</span>
+</code></pre></div><h2 id="match-terms-精确搜索"><a href="#match-terms-精确搜索" class="header-anchor">#</a> match_terms 精确搜索</h2> <p>精确查询，设置的term不会被分词</p> <div class="language-php extra-class"><pre class="language-php"><code><span class="token comment">// 精确查询</span>
+<span class="token variable">$query</span> <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token string single-quoted-string">'match_terms'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+        <span class="token string single-quoted-string">'field'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+            <span class="token string single-quoted-string">'name'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'tags'</span><span class="token punctuation">,</span>
+            <span class="token string single-quoted-string">'terms'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span><span class="token string single-quoted-string">'蔬菜'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'水果'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token comment">// 'terms' =&gt; '蔬菜',</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token string single-quoted-string">'list_rows'</span> <span class="token operator">=&gt;</span> <span class="token variable">$listRows</span><span class="token punctuation">,</span> <span class="token comment">//每页多少条数据</span>
+        <span class="token string single-quoted-string">'page'</span> <span class="token operator">=&gt;</span> <span class="token variable">$page</span><span class="token punctuation">,</span> <span class="token comment">//第几页</span>
+
+    <span class="token punctuation">]</span>
+
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token comment">// 搜索接口</span>
+<span class="token variable">$res</span> <span class="token operator">=</span> <span class="token variable">$Wind</span><span class="token operator">-&gt;</span><span class="token function">search</span><span class="token punctuation">(</span><span class="token variable">$query</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// $res 返回的最终结果，可直接渲染到前台页面</span>
+<span class="token comment">// ...</span>
+</code></pre></div><h2 id="match-bool-布尔搜索"><a href="#match-bool-布尔搜索" class="header-anchor">#</a> match_bool 布尔搜索</h2> <h3 id="bool搜索-无嵌套"><a href="#bool搜索-无嵌套" class="header-anchor">#</a> bool搜索 无嵌套</h3> <div class="language-php extra-class"><pre class="language-php"><code><span class="token comment">// 布尔查询</span>
+<span class="token variable">$query</span> <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token string single-quoted-string">'match_bool'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+        <span class="token string single-quoted-string">'bool'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+            <span class="token comment">//and</span>
+            <span class="token string single-quoted-string">'must'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+                <span class="token string single-quoted-string">'match'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+                    <span class="token punctuation">[</span>
+                    <span class="token string single-quoted-string">'title'</span> <span class="token operator">=&gt;</span> <span class="token variable">$text</span><span class="token punctuation">,</span>
+                    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                    <span class="token comment">// ['tags' =&gt; '服装',],</span>
+
+                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token comment">//or</span>
+            <span class="token string single-quoted-string">'should'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+                <span class="token string single-quoted-string">'match'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+                    <span class="token punctuation">[</span>
+                        <span class="token string single-quoted-string">'area'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'中国'</span><span class="token punctuation">,</span>
+                    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                    <span class="token punctuation">[</span>
+                        <span class="token string single-quoted-string">'area'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'韩国'</span><span class="token punctuation">,</span>
+                    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token string single-quoted-string">'minimum_should_match'</span> <span class="token operator">=&gt;</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token comment">//最少应该同时满足几个</span>
+
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token comment">//必须不包含</span>
+            <span class="token string single-quoted-string">'must_not'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+                <span class="token string single-quoted-string">'match'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span><span class="token comment">//字段间 or</span>
+                    <span class="token punctuation">[</span><span class="token string single-quoted-string">'level'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'三级'</span><span class="token punctuation">,</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                    <span class="token punctuation">[</span><span class="token string single-quoted-string">'level'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'二级'</span><span class="token punctuation">,</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token comment">//筛选过滤</span>
+            <span class="token string single-quoted-string">'filter'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+                <span class="token string single-quoted-string">'range'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span><span class="token comment">//可多个过滤字段</span>
+                    <span class="token string single-quoted-string">'score'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span> <span class="token comment">//每个字段一个或两个条件 lt lte gt gte</span>
+                        <span class="token string single-quoted-string">'lt'</span> <span class="token operator">=&gt;</span> <span class="token number">1000</span><span class="token punctuation">,</span>
+                        <span class="token string single-quoted-string">'gt'</span> <span class="token operator">=&gt;</span> <span class="token number">9</span><span class="token punctuation">,</span>
+                    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                    <span class="token string single-quoted-string">'time'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+                        <span class="token string single-quoted-string">'lt'</span> <span class="token operator">=&gt;</span> <span class="token number">1710288994</span>
+                    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token comment">// 只对must下面的字段有效</span>
+        <span class="token string single-quoted-string">'highlight'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+            <span class="token string single-quoted-string">'is_cut'</span> <span class="token operator">=&gt;</span> <span class="token constant boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// 是否将未匹配的地方截取掉</span>
+            <span class="token string single-quoted-string">'fixed_length'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">''</span><span class="token punctuation">,</span> <span class="token comment">//保留多少字符，若为空，则保持原长度</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token comment">// 结果排序</span>
+        <span class="token string single-quoted-string">'sort'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+             <span class="token string single-quoted-string">'time'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'desc'</span> <span class="token comment">//asc 按字段值正序 desc 按字段值倒序</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token string single-quoted-string">'_source'</span><span class="token operator">=&gt;</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'id'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'title'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'descr'</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token comment">//返回自定义字段，为空则全部返回</span>
+        <span class="token string single-quoted-string">'list_rows'</span> <span class="token operator">=&gt;</span> <span class="token variable">$listRows</span><span class="token punctuation">,</span> <span class="token comment">//每页多少条数据</span>
+        <span class="token string single-quoted-string">'page'</span> <span class="token operator">=&gt;</span> <span class="token variable">$page</span><span class="token punctuation">,</span> <span class="token comment">//第几页</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 搜索接口</span>
+<span class="token variable">$res</span> <span class="token operator">=</span> <span class="token variable">$Wind</span><span class="token operator">-&gt;</span><span class="token function">search</span><span class="token punctuation">(</span><span class="token variable">$query</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// $res 返回的最终结果，可直接渲染到前台页面</span>
+<span class="token comment">// ...</span>
+</code></pre></div><h3 id="bool搜索-should嵌套"><a href="#bool搜索-should嵌套" class="header-anchor">#</a> bool搜索 should嵌套</h3> <div class="language-php extra-class"><pre class="language-php"><code><span class="token comment">// 布尔搜索 嵌套</span>
+<span class="token variable">$query</span> <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token string single-quoted-string">'match_bool'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+        <span class="token string single-quoted-string">'bool'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+            <span class="token comment">//and</span>
+            <span class="token string single-quoted-string">'must'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+                <span class="token string single-quoted-string">'match'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+                    <span class="token punctuation">[</span>
+                        <span class="token string single-quoted-string">'title'</span> <span class="token operator">=&gt;</span> <span class="token variable">$text</span><span class="token punctuation">,</span>
+                    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                    <span class="token comment">// ['tags' =&gt; '服装',],</span>
+
+                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token comment">//or should嵌套</span>
+            <span class="token string single-quoted-string">'should'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+                <span class="token punctuation">[</span>
+                    <span class="token string single-quoted-string">'bool'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+                        <span class="token string single-quoted-string">'should'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+                            <span class="token string single-quoted-string">'match'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+                                <span class="token punctuation">[</span>
+                                    <span class="token string single-quoted-string">'area'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'中国'</span><span class="token punctuation">,</span>
+                                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                                <span class="token punctuation">[</span>
+                                    <span class="token string single-quoted-string">'area'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'韩国'</span><span class="token punctuation">,</span>
+                                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                            <span class="token string single-quoted-string">'minimum_should_match'</span> <span class="token operator">=&gt;</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token comment">//最少应该同时满足几个</span>
+                        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+
+                    <span class="token punctuation">]</span>
+                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token punctuation">[</span>
+                    <span class="token string single-quoted-string">'bool'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+                        <span class="token string single-quoted-string">'should'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+                            <span class="token string single-quoted-string">'match'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+                                <span class="token punctuation">[</span>
+                                    <span class="token string single-quoted-string">'area'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'美国'</span><span class="token punctuation">,</span>
+                                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                                <span class="token punctuation">[</span>
+                                    <span class="token string single-quoted-string">'area'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'新加坡'</span><span class="token punctuation">,</span>
+                                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                            <span class="token string single-quoted-string">'minimum_should_match'</span> <span class="token operator">=&gt;</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token comment">//最少应该同时满足几个</span>
+                        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                      
+
+                    <span class="token punctuation">]</span>
+                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token string single-quoted-string">'minimum_should_match'</span> <span class="token operator">=&gt;</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token comment">//最少应该同时满足几个</span>
+
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token comment">//必须不包含</span>
+            <span class="token string single-quoted-string">'must_not'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+                <span class="token string single-quoted-string">'match'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+                    <span class="token punctuation">[</span><span class="token string single-quoted-string">'level'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'三级'</span><span class="token punctuation">,</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token comment">//筛选过滤</span>
+            <span class="token string single-quoted-string">'filter'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+                <span class="token string single-quoted-string">'range'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+                    <span class="token string single-quoted-string">'score'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+                        <span class="token string single-quoted-string">'lt'</span> <span class="token operator">=&gt;</span> <span class="token number">45</span><span class="token punctuation">,</span>
+                        <span class="token string single-quoted-string">'gt'</span> <span class="token operator">=&gt;</span> <span class="token number">9</span><span class="token punctuation">,</span>
+                    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                    <span class="token string single-quoted-string">'time'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+                        <span class="token string single-quoted-string">'lt'</span> <span class="token operator">=&gt;</span> <span class="token number">1710288994</span>
+                    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token string single-quoted-string">'highlight'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+            <span class="token string single-quoted-string">'is_cut'</span> <span class="token operator">=&gt;</span> <span class="token constant boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// 是否将未匹配的地方截取掉</span>
+            <span class="token string single-quoted-string">'fixed_length'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">''</span><span class="token punctuation">,</span> <span class="token comment">//保留多少字符，若为空，则保持原长度</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token comment">// 结果排序</span>
+        <span class="token string single-quoted-string">'sort'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+            <span class="token string single-quoted-string">'time'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'desc'</span> <span class="token comment">//asc 按字段值正序 desc 按字段值倒序</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token string single-quoted-string">'list_rows'</span> <span class="token operator">=&gt;</span> <span class="token variable">$listRows</span><span class="token punctuation">,</span> <span class="token comment">//每页多少条数据</span>
+        <span class="token string single-quoted-string">'page'</span> <span class="token operator">=&gt;</span> <span class="token variable">$page</span><span class="token punctuation">,</span> <span class="token comment">//第几页</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 搜索接口</span>
+<span class="token variable">$res</span> <span class="token operator">=</span> <span class="token variable">$Wind</span><span class="token operator">-&gt;</span><span class="token function">search</span><span class="token punctuation">(</span><span class="token variable">$query</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// $res 返回的最终结果，可直接渲染到前台页面</span>
+<span class="token comment">// ...</span>
+</code></pre></div><h2 id="match-range-范围查询"><a href="#match-range-范围查询" class="header-anchor">#</a> match_range 范围查询</h2> <div class="language-php extra-class"><pre class="language-php"><code><span class="token comment">// 范围查询</span>
+<span class="token variable">$query</span> <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token string single-quoted-string">'match_range'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span> <span class="token comment">//lt lte gt gte</span>
+        <span class="token string single-quoted-string">'range'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+            <span class="token string single-quoted-string">'score'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+                <span class="token string single-quoted-string">'gt'</span> <span class="token operator">=&gt;</span> <span class="token number">9</span><span class="token punctuation">,</span>
+                <span class="token string single-quoted-string">'lt'</span> <span class="token operator">=&gt;</span> <span class="token number">40</span><span class="token punctuation">,</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token string single-quoted-string">'time'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+                <span class="token string single-quoted-string">'gt'</span> <span class="token operator">=&gt;</span> <span class="token number">1684206252</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token string single-quoted-string">'list_rows'</span> <span class="token operator">=&gt;</span> <span class="token variable">$listRows</span><span class="token punctuation">,</span> <span class="token comment">//每页多少条数据</span>
+        <span class="token string single-quoted-string">'page'</span> <span class="token operator">=&gt;</span> <span class="token variable">$page</span><span class="token punctuation">,</span> <span class="token comment">//第几页</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 搜索接口</span>
+<span class="token variable">$res</span> <span class="token operator">=</span> <span class="token variable">$Wind</span><span class="token operator">-&gt;</span><span class="token function">search</span><span class="token punctuation">(</span><span class="token variable">$query</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// $res 返回的最终结果，可直接渲染到前台页面</span>
+<span class="token comment">// ...</span>
+</code></pre></div><h2 id="match-all-查询所有数据"><a href="#match-all-查询所有数据" class="header-anchor">#</a> match_all 查询所有数据</h2> <div class="language-php extra-class"><pre class="language-php"><code><span class="token comment">// 查询所有数据</span>
+<span class="token variable">$query</span> <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token string single-quoted-string">'match_all'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+        <span class="token string single-quoted-string">'list_rows'</span> <span class="token operator">=&gt;</span> <span class="token variable">$listRows</span><span class="token punctuation">,</span> <span class="token comment">//每页多少条数据</span>
+        <span class="token string single-quoted-string">'page'</span> <span class="token operator">=&gt;</span> <span class="token variable">$page</span><span class="token punctuation">,</span> <span class="token comment">//第几页</span>
+        <span class="token string single-quoted-string">'order'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'asc'</span><span class="token punctuation">,</span> <span class="token comment">//desc 倒序 asc 正序</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 搜索接口</span>
+<span class="token variable">$res</span> <span class="token operator">=</span> <span class="token variable">$Wind</span><span class="token operator">-&gt;</span><span class="token function">search</span><span class="token punctuation">(</span><span class="token variable">$query</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// $res 返回的最终结果，可直接渲染到前台页面</span>
+<span class="token comment">// ...</span>
+</code></pre></div><h2 id="match-rand-随机获取数据"><a href="#match-rand-随机获取数据" class="header-anchor">#</a> match_rand 随机获取数据</h2> <div class="language-php extra-class"><pre class="language-php"><code><span class="token comment">// 随机获取数据</span>
+<span class="token variable">$query</span> <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token string single-quoted-string">'match_rand'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+        <span class="token string single-quoted-string">'size'</span> <span class="token operator">=&gt;</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token comment">//int 随机返回指定数量的结果</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 搜索接口</span>
+<span class="token variable">$res</span> <span class="token operator">=</span> <span class="token variable">$Wind</span><span class="token operator">-&gt;</span><span class="token function">search</span><span class="token punctuation">(</span><span class="token variable">$query</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// $res 返回的最终结果，可直接渲染到前台页面</span>
+<span class="token comment">// ...</span>
+</code></pre></div><h2 id="match-primarykey-根据主键查询数据"><a href="#match-primarykey-根据主键查询数据" class="header-anchor">#</a> match_primarykey 根据主键查询数据</h2> <div class="language-php extra-class"><pre class="language-php"><code><span class="token comment">// 根据主键查询数据</span>
+<span class="token variable">$query</span> <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token string single-quoted-string">'match_primarykey'</span><span class="token operator">=&gt;</span><span class="token punctuation">[</span>
+        <span class="token string single-quoted-string">'primarykey'</span><span class="token operator">=&gt;</span><span class="token string single-quoted-string">'5,4,3,2'</span><span class="token punctuation">,</span><span class="token comment">//array or string</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 搜索接口</span>
+<span class="token variable">$res</span> <span class="token operator">=</span> <span class="token variable">$Wind</span><span class="token operator">-&gt;</span><span class="token function">search</span><span class="token punctuation">(</span><span class="token variable">$query</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// $res 返回的最终结果，可直接渲染到前台页面</span>
+<span class="token comment">// ...</span>
+</code></pre></div><h2 id="match-geo-地理空间搜索"><a href="#match-geo-地理空间搜索" class="header-anchor">#</a> match_geo 地理空间搜索</h2> <div class="language-php extra-class"><pre class="language-php"><code><span class="token comment">//实例化引擎</span>
+<span class="token variable">$Wind</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name class-name-fully-qualified"><span class="token punctuation">\</span>WindSearch<span class="token punctuation">\</span>Index<span class="token punctuation">\</span>Wind</span><span class="token punctuation">(</span><span class="token variable">$indexName</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 地理空间搜索</span>
+<span class="token variable">$query</span> <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token string single-quoted-string">'match_geo'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+        <span class="token string single-quoted-string">'field'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+            <span class="token string single-quoted-string">'name'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'location'</span><span class="token punctuation">,</span> <span class="token comment">// 要进行搜索的字段，类型必须为geo_point</span>
+            <span class="token string single-quoted-string">'geo_point'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+                <span class="token string single-quoted-string">'lat'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'30.621900130545825'</span><span class="token punctuation">,</span> <span class="token comment">//纬度</span>
+                <span class="token string single-quoted-string">'lon'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'114.28891807367313'</span><span class="token punctuation">,</span> <span class="token comment">//经度</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token comment">// 'distance' =&gt; '10000m', // 10公里范围内</span>
+            <span class="token string single-quoted-string">'distance'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span><span class="token string single-quoted-string">'10km'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'20km'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// 1公里到10公里范围内</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token comment">// 结果排序</span>
+        <span class="token string single-quoted-string">'sort'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+            <span class="token string single-quoted-string">'geo_distance'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'asc'</span> <span class="token comment">//asc 按距离升序 desc 按距离降序</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token string single-quoted-string">'_source'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span><span class="token string single-quoted-string">'title'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'descr'</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token comment">//自定义返回字段</span>
+        <span class="token string single-quoted-string">'list_rows'</span> <span class="token operator">=&gt;</span> <span class="token variable">$listRows</span><span class="token punctuation">,</span> <span class="token comment">//每页多少条数据</span>
+        <span class="token string single-quoted-string">'page'</span> <span class="token operator">=&gt;</span> <span class="token variable">$page</span><span class="token punctuation">,</span> <span class="token comment">//第几页</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 搜索接口</span>
+<span class="token variable">$res</span> <span class="token operator">=</span> <span class="token variable">$Wind</span><span class="token operator">-&gt;</span><span class="token function">search</span><span class="token punctuation">(</span><span class="token variable">$query</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// $res 返回的最终结果，可直接渲染到前台页面</span>
+<span class="token comment">// ...</span>
+</code></pre></div><h2 id="match-auto-completion-搜索建议"><a href="#match-auto-completion-搜索建议" class="header-anchor">#</a> match_auto_completion 搜索建议</h2> <div class="language-php extra-class"><pre class="language-php"><code><span class="token comment">// 配置搜索建议</span>
+<span class="token comment">// 在配置mapping时，在需要用于搜索建议的字段上，做如下配置：</span>
+ <span class="token punctuation">[</span>
+    <span class="token string single-quoted-string">'name'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'title'</span><span class="token punctuation">,</span>
+    <span class="token string single-quoted-string">'type'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'text'</span><span class="token punctuation">,</span> <span class="token comment">//数据类型：文本类型，会根据analyzer配置的方式进行分词</span>
+    <span class="token string single-quoted-string">'index'</span> <span class="token operator">=&gt;</span> <span class="token constant boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// 会被索引</span>
+     
+    <span class="token string single-quoted-string">'function'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span> <span class="token comment">//功能</span>
+        <span class="token string single-quoted-string">'completion'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">//自动补全（搜索建议）</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">]</span><span class="token punctuation">,</span>
+
+
+<span class="token comment">//进行搜索建议、自动补全</span>
+<span class="token variable">$Wind</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name class-name-fully-qualified"><span class="token punctuation">\</span>WindSearch<span class="token punctuation">\</span>Index<span class="token punctuation">\</span>Wind</span><span class="token punctuation">(</span><span class="token variable">$indexName</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$query</span> <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token string single-quoted-string">'match_auto_completion'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+        <span class="token string single-quoted-string">'field'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+            <span class="token string single-quoted-string">'name'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'title'</span><span class="token punctuation">,</span><span class="token comment">//title字段必须配置为completion</span>
+            <span class="token string single-quoted-string">'query'</span> <span class="token operator">=&gt;</span> <span class="token variable">$text</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token string single-quoted-string">'num'</span> <span class="token operator">=&gt;</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token comment">//返回多少条数据</span>
+    <span class="token punctuation">]</span>
+
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token comment">// 搜索接口</span>
+<span class="token variable">$res</span> <span class="token operator">=</span> <span class="token variable">$Wind</span><span class="token operator">-&gt;</span><span class="token function">search</span><span class="token punctuation">(</span><span class="token variable">$query</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// $res 返回的最终结果，可重构数据结构，返回前台用于搜索提示</span>
+<span class="token comment">// ...</span>
+</code></pre></div><h2 id="敏感词检测"><a href="#敏感词检测" class="header-anchor">#</a> 敏感词检测</h2> <p>引擎内置了trie树算法，可快速构建敏感词前缀索引，高效地进行敏感词检测</p> <h3 id="导入敏感词数据"><a href="#导入敏感词数据" class="header-anchor">#</a> 导入敏感词数据</h3> <div class="language-php extra-class"><pre class="language-php"><code><span class="token comment">//导入敏感词数据，构建trie树索引</span>
+<span class="token variable">$Wind</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name class-name-fully-qualified"><span class="token punctuation">\</span>WindSearch<span class="token punctuation">\</span>Index<span class="token punctuation">\</span>Wind</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 将敏感词数据导入，引擎会自动构建索引，并自动保存</span>
+<span class="token comment">// 内部会自动删除字符串中所有空格</span>
+<span class="token comment">// $arr = ['敏感词1','敏感词2','敏感词3'...]</span>
+<span class="token variable">$Wind</span><span class="token operator">-&gt;</span><span class="token function">buildSensitiveIndex</span><span class="token punctuation">(</span><span class="token variable">$arr</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre></div><h3 id="检测是否存在敏感词"><a href="#检测是否存在敏感词" class="header-anchor">#</a> 检测是否存在敏感词</h3> <div class="language-php extra-class"><pre class="language-php"><code><span class="token comment">// 只检测是否存在敏感词</span>
+<span class="token variable">$Wind</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name class-name-fully-qualified"><span class="token punctuation">\</span>WindSearch<span class="token punctuation">\</span>Index<span class="token punctuation">\</span>Wind</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$isSensitive</span> <span class="token operator">=</span> <span class="token variable">$Wind</span><span class="token operator">-&gt;</span><span class="token function">checkSensitive</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'需要检测的字符串'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 存在敏感词，返回true</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token variable">$isSensitive</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">echo</span> <span class="token string single-quoted-string">'存在敏感词'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 不存在返回false</span>
+<span class="token keyword">else</span><span class="token punctuation">{</span>
+    <span class="token keyword">echo</span> <span class="token string single-quoted-string">'不存在敏感词'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="替换掉所有敏感词"><a href="#替换掉所有敏感词" class="header-anchor">#</a> 替换掉所有敏感词</h3> <div class="language-php extra-class"><pre class="language-php"><code><span class="token comment">// 检测并替换所有存在的敏感词</span>
+<span class="token variable">$Wind</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name class-name-fully-qualified"><span class="token punctuation">\</span>WindSearch<span class="token punctuation">\</span>Index<span class="token punctuation">\</span>Wind</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$replace</span> <span class="token operator">=</span> <span class="token string single-quoted-string">'***'</span><span class="token punctuation">;</span><span class="token comment">//替换字符，可选，默认值为 **</span>
+<span class="token comment">// 开始检测替换</span>
+<span class="token variable">$replaceRes</span> <span class="token operator">=</span> <span class="token variable">$Wind</span><span class="token operator">-&gt;</span><span class="token function">checkSensitiveReplace</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'需要检测的字符串'</span><span class="token punctuation">,</span><span class="token variable">$replace</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// $replaceRes为替换结果</span>
+
+</code></pre></div><h3 id="提取所有敏感词"><a href="#提取所有敏感词" class="header-anchor">#</a> 提取所有敏感词</h3> <div class="language-php extra-class"><pre class="language-php"><code><span class="token comment">// 提取所有敏感词</span>
+<span class="token variable">$Wind</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name class-name-fully-qualified"><span class="token punctuation">\</span>WindSearch<span class="token punctuation">\</span>Index<span class="token punctuation">\</span>Wind</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$allSensitiveWords</span> <span class="token operator">=</span> <span class="token variable">$Wind</span><span class="token operator">-&gt;</span><span class="token function">getAllSensitiveWords</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'需要检测的字符串'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// $allSensitiveWords为被检测字符串内所有的敏感词</span>
+</code></pre></div><h2 id="aggs-聚合查询"><a href="#aggs-聚合查询" class="header-anchor">#</a> aggs 聚合查询</h2> <p><em>聚合查询性能很差，数据量大时慎用</em></p> <h3 id="分组聚合-基础"><a href="#分组聚合-基础" class="header-anchor">#</a> 分组聚合（基础）</h3> <div class="language-php extra-class"><pre class="language-php"><code><span class="token comment">//实例化引擎</span>
+<span class="token variable">$Wind</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name class-name-fully-qualified"><span class="token punctuation">\</span>WindSearch<span class="token punctuation">\</span>Index<span class="token punctuation">\</span>Wind</span><span class="token punctuation">(</span><span class="token variable">$indexName</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 分组聚合 以某个字段的内容进行分组，默认统计每组的总数 count</span>
+<span class="token variable">$query</span> <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token string single-quoted-string">'aggs_group_simp'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+        <span class="token string single-quoted-string">'field'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+            <span class="token string single-quoted-string">'name'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'area'</span><span class="token punctuation">,</span> <span class="token comment">// 以area字段内容进行分组</span>
+            <span class="token string single-quoted-string">'match'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span> <span class="token comment">//限制字段的内容</span>
+                <span class="token string single-quoted-string">'tags'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span><span class="token string single-quoted-string">'蔬菜'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'水果'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'饮料'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'零食'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">//值可以为字符串，也可以为数组； 限制字段，如果是keyword类型，会走索引，否则会全表扫描</span>
+                <span class="token string single-quoted-string">'area'</span><span class="token operator">=&gt;</span><span class="token string single-quoted-string">'中国'</span><span class="token punctuation">,</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token string single-quoted-string">'sort'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+            <span class="token string single-quoted-string">'_count'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'desc'</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token string single-quoted-string">'list_rows'</span> <span class="token operator">=&gt;</span> <span class="token variable">$listRows</span><span class="token punctuation">,</span> <span class="token comment">//每页多少条数据</span>
+        <span class="token string single-quoted-string">'page'</span> <span class="token operator">=&gt;</span> <span class="token variable">$page</span><span class="token punctuation">,</span> <span class="token comment">//第几页</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 搜索接口</span>
+<span class="token variable">$res</span> <span class="token operator">=</span> <span class="token variable">$Wind</span><span class="token operator">-&gt;</span><span class="token function">search</span><span class="token punctuation">(</span><span class="token variable">$query</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// $res 返回的最终结果，可直接渲染到前台页面</span>
+<span class="token comment">// ...</span>
+</code></pre></div><h3 id="分组聚合-进阶"><a href="#分组聚合-进阶" class="header-anchor">#</a> 分组聚合（进阶）</h3> <div class="language-php extra-class"><pre class="language-php"><code><span class="token comment">//实例化引擎</span>
+<span class="token variable">$Wind</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name class-name-fully-qualified"><span class="token punctuation">\</span>WindSearch<span class="token punctuation">\</span>Index<span class="token punctuation">\</span>Wind</span><span class="token punctuation">(</span><span class="token variable">$indexName</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 分组聚合 进阶</span>
+<span class="token variable">$query</span> <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token string single-quoted-string">'aggs_group'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+        <span class="token string single-quoted-string">'field'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+            <span class="token string single-quoted-string">'name'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'tags'</span><span class="token punctuation">,</span> <span class="token comment">// 以time字段内容进行分组</span>
+            <span class="token string single-quoted-string">'match'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span> <span class="token comment">//可选 限制字段的内容</span>
+                <span class="token string single-quoted-string">'area'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span><span class="token string single-quoted-string">'中国'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">//分组字段必须是keyword类型；限制字段，如果是keyword类型，会走索引，否则会全表扫描</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token string single-quoted-string">'sum'</span><span class="token operator">=&gt;</span><span class="token punctuation">[</span>
+            <span class="token string single-quoted-string">'avg'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+                <span class="token string single-quoted-string">'name'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'score'</span> <span class="token comment">// 分组后，再计算每组的score的平均值，再获取平均值最大的那一条 avg max min sum</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+
+        <span class="token string single-quoted-string">'list_rows'</span> <span class="token operator">=&gt;</span> <span class="token variable">$listRows</span><span class="token punctuation">,</span> <span class="token comment">//每页多少条数据</span>
+        <span class="token string single-quoted-string">'page'</span> <span class="token operator">=&gt;</span> <span class="token variable">$page</span><span class="token punctuation">,</span> <span class="token comment">//第几页</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token comment">// 搜索接口</span>
+<span class="token variable">$res</span> <span class="token operator">=</span> <span class="token variable">$Wind</span><span class="token operator">-&gt;</span><span class="token function">search</span><span class="token punctuation">(</span><span class="token variable">$query</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// $res 返回的最终结果，可直接渲染到前台页面</span>
+<span class="token comment">// ...</span>
+</code></pre></div><h3 id="指标聚合"><a href="#指标聚合" class="header-anchor">#</a> 指标聚合</h3> <div class="language-php extra-class"><pre class="language-php"><code><span class="token comment">//实例化引擎</span>
+<span class="token variable">$Wind</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name class-name-fully-qualified"><span class="token punctuation">\</span>WindSearch<span class="token punctuation">\</span>Index<span class="token punctuation">\</span>Wind</span><span class="token punctuation">(</span><span class="token variable">$indexName</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 指标聚合 max min avg sum</span>
+<span class="token variable">$query</span> <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token string single-quoted-string">'aggs_metrics'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+        <span class="token string single-quoted-string">'max'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+            <span class="token string single-quoted-string">'field'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+                <span class="token string single-quoted-string">'name'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'price'</span><span class="token punctuation">,</span> <span class="token comment">// 最大值</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token string single-quoted-string">'min'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+            <span class="token string single-quoted-string">'field'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+                <span class="token string single-quoted-string">'name'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'price'</span><span class="token punctuation">,</span> <span class="token comment">// 最小值</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token string single-quoted-string">'avg'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+            <span class="token string single-quoted-string">'field'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+                <span class="token string single-quoted-string">'name'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'price'</span><span class="token punctuation">,</span> <span class="token comment">// 平均值</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token string single-quoted-string">'sum'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+            <span class="token string single-quoted-string">'field'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+                <span class="token string single-quoted-string">'name'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'price'</span><span class="token punctuation">,</span> <span class="token comment">// 总和</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+
+<span class="token comment">// 搜索接口</span>
+<span class="token variable">$res</span> <span class="token operator">=</span> <span class="token variable">$Wind</span><span class="token operator">-&gt;</span><span class="token function">search</span><span class="token punctuation">(</span><span class="token variable">$query</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// $res 返回的最终结果，可直接渲染到前台页面</span>
+<span class="token comment">// ...</span>
+</code></pre></div><h3 id="分组嵌套"><a href="#分组嵌套" class="header-anchor">#</a> 分组嵌套</h3> <div class="language-php extra-class"><pre class="language-php"><code><span class="token comment">//实例化引擎</span>
+<span class="token variable">$Wind</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name class-name-fully-qualified"><span class="token punctuation">\</span>WindSearch<span class="token punctuation">\</span>Index<span class="token punctuation">\</span>Wind</span><span class="token punctuation">(</span><span class="token variable">$indexName</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 嵌套查询</span>
+<span class="token variable">$query</span> <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token string single-quoted-string">'aggs_group'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+        <span class="token string single-quoted-string">'field'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+            <span class="token string single-quoted-string">'name'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'tags'</span><span class="token punctuation">,</span> <span class="token comment">// 以tags字段内容进行分组 分组字段必须是keyword类型</span>
+            <span class="token string single-quoted-string">'match'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span> <span class="token comment">//可选 限制字段的内容，字段必须是keyword类型</span>
+                <span class="token string single-quoted-string">'area'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span><span class="token string single-quoted-string">'中国'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// 只查询聚合area为“中国”的内容</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token string single-quoted-string">'aggs_group'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+            <span class="token string single-quoted-string">'field'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+                <span class="token string single-quoted-string">'name'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'level'</span><span class="token punctuation">,</span> <span class="token comment">// 再在tags字段分组的基础上，以level字段内容进行分组</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token string single-quoted-string">'max'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+                <span class="token string single-quoted-string">'avg'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+                    <span class="token string single-quoted-string">'name'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'score'</span> <span class="token comment">// 分组后，再计算每组的score的平均值，再获取平均值的最大值 avg max min sum</span>
+                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token string single-quoted-string">'list_rows'</span> <span class="token operator">=&gt;</span> <span class="token variable">$listRows</span><span class="token punctuation">,</span> <span class="token comment">//每页多少条数据</span>
+		<span class="token string single-quoted-string">'page'</span> <span class="token operator">=&gt;</span> <span class="token variable">$page</span><span class="token punctuation">,</span> <span class="token comment">//第几页</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token comment">// 搜索接口</span>
+<span class="token variable">$res</span> <span class="token operator">=</span> <span class="token variable">$Wind</span><span class="token operator">-&gt;</span><span class="token function">search</span><span class="token punctuation">(</span><span class="token variable">$query</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// $res 返回的最终结果</span>
+<span class="token comment">// ...</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/guide/v1.0/构建索引.html" class="prev">
+        构建索引
+      </a></span> <span class="next"><a href="/guide/v1.0/搜索过滤.html">
+        搜索过滤
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.f8af33ae.js" defer></script><script src="/assets/js/2.0c4bddf9.js" defer></script><script src="/assets/js/1.50b457b8.js" defer></script><script src="/assets/js/32.dc008934.js" defer></script>
+  </body>
+</html>
